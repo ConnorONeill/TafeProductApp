@@ -16,6 +16,7 @@ namespace ProductApps
         private decimal gst;
         public decimal totalPaymentdelivery;
         public decimal totalPaymentwrap;
+        public decimal totalPaymentgst;
 
         private decimal Gst
         {
@@ -86,6 +87,11 @@ namespace ProductApps
             totalPaymentwrap = Price * Quantity + 25 + 5;
         }
 
+        //calculate the total + gst
+        public void calTotalPaymentgst()
+        {
+            totalPaymentgst = totalPaymentwrap * 1.1m;
+        }
         
         
     }
